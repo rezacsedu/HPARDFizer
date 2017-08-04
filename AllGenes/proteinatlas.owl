@@ -1,0 +1,916 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://data.bioinfo.deri.ie/gene/"
+     xml:base="http://data.bioinfo.deri.ie/gene/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://data.bioinfo.deri.ie/gene/#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasAntibody -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasAntibody">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Gene"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasAssayImage -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasAssayImage">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_Data"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_AssayImage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasBlotLane -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasBlotLane">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_WesternBlot"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/AWB_BlotLanes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasCellExpression -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasCellExpression">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Gene"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/AB_CellExpression"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/CellExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasData -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasData">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_TissueExpression"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_SubAssay"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/CellExpression"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/RnaExpression"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_Data"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Data"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/CE_Data"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/RE_Data"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasImage -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasImage">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_ProteinArray"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_TissueExpression"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_WesternBlot"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_SubAssay"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/CellExpression"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_Image"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/APA_Image"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Image"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/AWB_Image"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/CE_Image"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Image"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasPatient -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasPatient">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Data"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasProtein -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasProtein">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/AB_ProteinArray"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasProteinClass -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasProteinClass">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Gene"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/ProteinClasses"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasProteinEvidence -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasProteinEvidence">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Gene"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/ProteinEvidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasRnaExpression -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasRnaExpression">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Gene"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/RnaExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasRnaTissueCategory -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasRnaTissueCategory">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/RnaExpression"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/RnaTissueCategory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasSubAssay -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasSubAssay">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_CellExpression"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_SubAssay"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasSummary -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasSummary">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_TissueExpression"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/CellExpression"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Summary"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/CE_Summary"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Summary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasTissueCell -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasTissueCell">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Data"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Data"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_TissueCell"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/TE_TissueCell"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasTissueExpression -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasTissueExpression">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Gene"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/AB_TissueExpression"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasValidation -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasValidation">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_TissueExpression"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Validation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasVerification -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasVerification">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_ProteinArray"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_WesternBlot"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/CellExpression"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/APA_Verification"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/AWB_Verification"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/CE_Verification"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Verification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasWeight -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasWeight">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/AB_TargetWeights"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/hasWesternBlot -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/hasWesternBlot">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/AB_WesternBlot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/isIdentifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.bioinfo.deri.ie/gene/isIdentifiedBy">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Gene"/>
+        <rdfs:range rdf:resource="http://data.bioinfo.deri.ie/gene/Identifier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ID -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/ID">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Identifier"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ProteinClass"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/age -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/age">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/antigenSequence -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/antigenSequence">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/assayType -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/assayType">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/cellLine -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/cellLine">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/RE_Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/cellType -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/cellType">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_Data"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_TissueCell"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TE_TissueCell"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/description -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/description">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_Image"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/APA_Verification"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Image"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Summary"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AWB_Verification"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/CE_Summary"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/RnaTissueCategory"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Summary"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Verification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/expressionLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/expressionLevel">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Data"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TE_TissueCell"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/geneSynonym -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/geneSynonym">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Gene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/imageType -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/imageType">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/APA_Image"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AWB_Image"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/imageUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/imageUrl">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_AssayImage"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_Image"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/APA_Image"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Image"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AWB_Image"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/CE_Image"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Image"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/intensityLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/intensityLevel">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_TissueCell"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/level -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/level">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/RE_Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/location -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/location">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_Data"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_TissueCell"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/CE_Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/message -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/message">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Validation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/name -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/name">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Evidence"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Gene"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ProteinClass"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/RnaTissueCategory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/patientId -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/patientId">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/quantity -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/quantity">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_TissueCell"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/reliability -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/reliability">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/CE_Verification"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Verification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/sex -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/sex">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/source -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/source">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/Evidence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/stainingLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/stainingLevel">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_TissueCell"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/technology -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/technology">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_CellExpression"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_ProteinArray"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_WesternBlot"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/CellExpression"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/RnaExpression"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/tissue -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/tissue">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Data"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Data"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Image"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/tpm -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/tpm">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/RE_Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/type -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/type">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_SubAssay"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/APA_Verification"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Summary"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Validation"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/CellExpression"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/RE_Data"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Summary"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Verification"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/unit -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/unit">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_TargetWeights"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AWB_BlotLanes"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/validation -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/validation">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/APA_Verification"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AWB_Verification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/validationType -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/validationType">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_SubAssay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/value -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/value">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AB_TargetWeights"/>
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/AWB_BlotLanes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/#channel -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/#channel">
+        <rdfs:domain rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_AssayImage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/#index -->
+
+    <owl:DatatypeProperty rdf:about="http://data.bioinfo.deri.ie/gene/#index">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/AB_CellExpression -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/AB_CellExpression">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/AB_ProteinArray -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/AB_ProteinArray">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/AB_TargetWeights -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/AB_TargetWeights">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/AB_TissueExpression -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/AB_TissueExpression">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/AB_WesternBlot -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/AB_WesternBlot">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/Antibody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ACE_AssayImage -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ACE_AssayImage">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ACE_Data -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ACE_Data">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_SubAssay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ACE_Image -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ACE_Image">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/ACE_SubAssay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ACE_SubAssay -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ACE_SubAssay">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/AB_CellExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/APA_Image -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/APA_Image">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/AB_ProteinArray"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/APA_Verification -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/APA_Verification">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/AB_ProteinArray"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ATE_Data -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ATE_Data">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/AB_TissueExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ATE_Image -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ATE_Image">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/AB_TissueExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ATE_Patient -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ATE_Patient">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ATE_Summary -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ATE_Summary">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/AB_TissueExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ATE_TissueCell -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ATE_TissueCell">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/ATE_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ATE_Validation -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ATE_Validation">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/AB_TissueExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/AWB_BlotLanes -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/AWB_BlotLanes">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/AB_WesternBlot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/AWB_Image -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/AWB_Image">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/AB_WesternBlot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/AWB_Verification -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/AWB_Verification">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/AB_WesternBlot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/Antibody -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/Antibody"/>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/CE_Data -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/CE_Data">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/CellExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/CE_Image -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/CE_Image">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/CellExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/CE_Summary -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/CE_Summary">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/CellExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/CE_Verification -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/CE_Verification">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/CellExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/CellExpression -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/CellExpression"/>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/Evidence -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/Evidence">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/ProteinEvidence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/Gene -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/Gene"/>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/Identifier -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/Identifier"/>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ProteinClass -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ProteinClass">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/ProteinClasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ProteinClasses -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ProteinClasses"/>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/ProteinEvidence -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/ProteinEvidence"/>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/RE_Data -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/RE_Data">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/RnaExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/RnaExpression -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/RnaExpression"/>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/RnaTissueCategory -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/RnaTissueCategory">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/RnaExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/TE_Data -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/TE_Data">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/TE_Image -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/TE_Image">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/TE_Summary -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/TE_Summary">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/TE_TissueCell -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/TE_TissueCell">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/TE_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/TE_Verification -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/TE_Verification">
+        <rdfs:subClassOf rdf:resource="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.bioinfo.deri.ie/gene/TissueExpression -->
+
+    <owl:Class rdf:about="http://data.bioinfo.deri.ie/gene/TissueExpression"/>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://data.bioinfo.deri.ie/gene/Gene"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
